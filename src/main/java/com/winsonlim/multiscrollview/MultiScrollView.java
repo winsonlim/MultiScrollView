@@ -1,4 +1,4 @@
-package my.com.maxis.hotlink.Utils;
+package com.winsonlim.multiscrollview;
 
 import android.content.Context;
 import android.util.AttributeSet;
