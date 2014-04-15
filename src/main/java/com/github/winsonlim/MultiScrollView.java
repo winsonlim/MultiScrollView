@@ -1,4 +1,4 @@
-package com.winsonlim.multiscrollview;
+package com.github.winsonlim;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -45,7 +45,7 @@ public class MultiScrollView extends ScrollView {
 				switch (event.getAction()) {
 					case MotionEvent.ACTION_DOWN: {
 						downY = event.getY();
-						gi
+
 						//   return true;
 					}
 					case MotionEvent.ACTION_MOVE: {
@@ -55,7 +55,7 @@ public class MultiScrollView extends ScrollView {
 
 						// detect down scrolling
 						if (deltaY > 0) {
-							if (childView.getMeasuredHeight() <= my.com.maxis.hotlink.Utils.MultiScrollView.this.getScrollY() + my.com.maxis.hotlink.Utils.MultiScrollView.this.getHeight()) {
+							if (childView.getMeasuredHeight() <= MultiScrollView.this.getScrollY() + MultiScrollView.this.getHeight()) {
 								//bottom reached!
 								viewParent.requestDisallowInterceptTouchEvent(false);
 
@@ -65,7 +65,7 @@ public class MultiScrollView extends ScrollView {
 
 						// detect up scrolling
 						if (deltaY < 0) {
-							if (my.com.maxis.hotlink.Utils.MultiScrollView.this.getScrollY() == 0) {
+							if (MultiScrollView.this.getScrollY() == 0) {
 								//top reached!
 								viewParent.requestDisallowInterceptTouchEvent(false);
 
