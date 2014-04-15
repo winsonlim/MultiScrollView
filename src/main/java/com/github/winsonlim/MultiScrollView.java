@@ -11,9 +11,6 @@ import android.widget.ScrollView;
  * Created by winsonlim on 14/4/14.
  */
 public class MultiScrollView extends ScrollView {
-	private float downY, upY;
-
-	private View childView;
 
 	public MultiScrollView(Context context) {
 		super(context);
