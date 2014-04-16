@@ -16,7 +16,7 @@
 
     <groupId>com.github.winsonlim</groupId>
     <artifactId>multiscrollview</artifactId>
-    <version>0.1.3</version>
+    <version>0.1.4-SNAPSHOT</version>
     
     <name>MultiScrollView</name>
     <url>https://github.com/winsonlim/MultiScrollView</url>
