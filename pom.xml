@@ -11,20 +11,26 @@
   ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   ~ See the Apache License Version 2.0 for the specific language governing permissions and limitations there under.
   -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.winsonlim</groupId>
     <artifactId>multiscrollview</artifactId>
     <version>0.1.4-SNAPSHOT</version>
-    
+    <packaging>jar</packaging>
+
     <name>MultiScrollView</name>
     <url>https://github.com/winsonlim/MultiScrollView</url>
-    <description>The MultiScrollView extends the ScrollView class to enable user to scroll in the child's layout instead of the parent view.</description>
+    <description>The MultiScrollView extends the ScrollView class to enable user to scroll in the
+        child's layout instead of the parent view.
+    </description>
 
     <scm>
         <connection>scm:git:https://github.com/winsonlim/MultiScrollView.git</connection>
-        <developerConnection>scm:git:https://github.com/winsonlim/MultiScrollView.git</developerConnection>
+        <developerConnection>scm:git:https://github.com/winsonlim/MultiScrollView.git
+        </developerConnection>
         <url>https://github.com/winsonlim/MultiScrollView</url>
     </scm>
 
@@ -96,7 +102,9 @@
                             <rules>
                                 <requireMavenVersion>
                                     <version>(,2.1.0),(2.1.0,2.2.0),(2.2.0,)</version>
-                                    <message>Maven 2.1.0 and 2.2.0 produce incorrect GPG signatures and checksums respectively.</message>
+                                    <message>Maven 2.1.0 and 2.2.0 produce incorrect GPG signatures
+                                        and checksums respectively.
+                                    </message>
                                 </requireMavenVersion>
                             </rules>
                         </configuration>
@@ -122,7 +130,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <sonatypeOssDistMgmtSnapshotsUrl>https://oss.sonatype.org/content/repositories/snapshots/</sonatypeOssDistMgmtSnapshotsUrl>
+        <sonatypeOssDistMgmtSnapshotsUrl>https://oss.sonatype.org/content/repositories/snapshots/
+        </sonatypeOssDistMgmtSnapshotsUrl>
     </properties>
 
     <profiles>
@@ -130,6 +139,7 @@
             <id>sonatype-oss-release</id>
             <build>
                 <plugins>
+                    <!-- DO NOT ATTACH SOURCES
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
@@ -143,19 +153,22 @@
                             </execution>
                         </executions>
                     </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>2.7</version>
-                        <executions>
-                            <execution>
-                                <id>attach-javadocs</id>
-                                <goals>
-                                    <goal>jar</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
+                    -->
+                    <!-- DO NOT ATTACH JAVADOC
+                   <plugin>
+                       <groupId>org.apache.maven.plugins</groupId>
+                       <artifactId>maven-javadoc-plugin</artifactId>
+                       <version>2.7</version>
+                       <executions>
+                           <execution>
+                               <id>attach-javadocs</id>
+                               <goals>
+                                   <goal>jar</goal>
+                               </goals>
+                           </execution>
+                       </executions>
+                   </plugin>
+                   -->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>

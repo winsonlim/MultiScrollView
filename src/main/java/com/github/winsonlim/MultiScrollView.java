@@ -11,6 +11,7 @@ import android.widget.ScrollView;
  * Created by winsonlim on 14/4/14.
  */
 public class MultiScrollView extends ScrollView {
+	private View childView;
 
 	public MultiScrollView(Context context) {
 		super(context);
@@ -24,8 +25,22 @@ public class MultiScrollView extends ScrollView {
 		super(context, attrs, defStyle);
 	}
 
-	public void init(final View childView) {
-		if (childView == null) return;
+	/**
+	 * Initialises ScrollView's content
+	 *
+	 * @param childView The immediate (single) child Layout/View of this ScrollView
+	 */
+	public void init(View childView) throws NullPointerException {
+		if (childView == null) {
+			throw new NullPointerException("Child View cannot be NULL");
+		}
+
+		this.childView = childView;
+
+		overrideChildView();
+	}
+
+	private void overrideChildView() {
 
 		this.setOnTouchListener(new View.OnTouchListener() {
 			float downY;
@@ -43,7 +58,8 @@ public class MultiScrollView extends ScrollView {
 					case MotionEvent.ACTION_DOWN: {
 						downY = event.getY();
 
-						//   return true;
+						// do not consume MotionEvent
+						// return true;
 					}
 					case MotionEvent.ACTION_MOVE: {
 						upY = event.getY();
