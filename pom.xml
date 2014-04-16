@@ -16,9 +16,8 @@
 
     <groupId>com.github.winsonlim</groupId>
     <artifactId>multiscrollview</artifactId>
-    <version>0.1.3-SNAPSHOT</version>
-    <packaging>pom</packaging>
-
+    <version>0.1.3</version>
+    
     <name>MultiScrollView</name>
     <url>https://github.com/winsonlim/MultiScrollView</url>
     <description>The MultiScrollView extends the ScrollView class to enable user to scroll in the child's layout instead of the parent view.</description>
